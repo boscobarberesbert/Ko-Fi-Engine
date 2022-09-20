@@ -1,20 +1,25 @@
 #include "PanelConfiguration.h"
 #include "PanelChooser.h"
 #include "Engine.h"
-#include "Window.h"
-#include "Renderer3D.h"
-#include "Input.h"
+#include "M_Window.h"
+#include "M_SceneManager.h"
+#include "M_Renderer3D.h"
+#include "M_Input.h"
+#include "M_Audio.h"
 #include "EngineConfig.h"
-#include "Editor.h"
+#include "M_Editor.h"
+#include "SceneIntro.h"
+
 #include <imgui.h>
 #include "glew.h"
 
-PanelConfiguration::PanelConfiguration(Editor* editor, EngineConfig* engineConfig)
+PanelConfiguration::PanelConfiguration(M_Editor* editor, EngineConfig* engineConfig)
 {
 	panelName = "Configuration";
 	
 	this->engineConfig = engineConfig;
 	this->editor = editor;
+	this->masterVol = 5;
 }
 
 PanelConfiguration::~PanelConfiguration()
@@ -26,13 +31,10 @@ bool PanelConfiguration::Awake()
 	return true;
 }
 
-bool PanelConfiguration::PreUpdate()
-{
-	return true;
-}
-
 bool PanelConfiguration::Update()
 {
+	OPTICK_EVENT();
+
 	ImGui::Begin(panelName.c_str(),0);
 
 	if (ImGui::BeginMenu("Options"))
@@ -62,7 +64,7 @@ bool PanelConfiguration::Update()
 		strcpy_s(organization, 120, engineConfig->organization.c_str());
 		ImGui::InputText("Organization", organization, 120, ImGuiInputTextFlags_EnterReturnsTrue | ImGuiInputTextFlags_AutoSelectAll);
 
-		if (ImGui::SliderInt("Max FPS", &engineConfig->maxFps, 0, 120))
+		if (ImGui::SliderInt("Max FPS", &engineConfig->maxFps, 0, 200))
 			engineConfig->cappedMs = 1000 / engineConfig->maxFps;
 
 		char title[25];
@@ -72,14 +74,21 @@ bool PanelConfiguration::Update()
 		ImGui::PlotHistogram("##milliseconds", &engineConfig->msLog[0], engineConfig->msLog.size(), 0, title, 0.0f, 40.0f, ImVec2(310, 100));
 	}
 
+	if (ImGui::CollapsingHeader("Resource Manager"))
+	{
+		if (ImGui::Checkbox("Show Loaded Resources", &editor->toggleResourcesPanel)) {}
+	}
+
 	if (ImGui::CollapsingHeader("Renderer"))
 	{
 		bool vsync = editor->engine->GetRenderer()->GetVsync();
 		if (ImGui::Checkbox("VSync", &vsync))
 			editor->engine->GetRenderer()->SetVsync(vsync);
+		if (ImGui::Checkbox("Draw scene partition tree", &editor->engine->GetSceneManager()->GetCurrentScene()->drawSceneTree)) {}
 	}
 
-	if (ImGui::CollapsingHeader("Input")) {
+	if (ImGui::CollapsingHeader("Input"))
+	{
 		int mouseX = editor->engine->GetInput()->GetMouseX();
 		int mouseY = editor->engine->GetInput()->GetMouseY();
 		ImGui::Text("Mouse Position:");
@@ -100,14 +109,12 @@ bool PanelConfiguration::Update()
 
 	if (ImGui::CollapsingHeader("Window"))
 	{
-
-		
 		ImGui::Text("Icon:");
 		ImGui::SameLine();
 		if (editor->GetPanelChooser()->IsReadyToClose("PanelConfig"))
 		{
-			const char* file = editor->GetPanelChooser()->OnChooserClosed();
-			if (file != nullptr)
+			std::string file = editor->GetPanelChooser()->OnChooserClosed();
+			if (!file.empty())
 			{
 				std::string newFile = file;
 				newFile.erase(newFile.begin());
@@ -115,7 +122,7 @@ bool PanelConfiguration::Update()
 			}
 		}
 		if (ImGui::Selectable(editor->engine->GetWindow()->GetIcon()))
-			editor->GetPanelChooser()->OpenPanel("PanelConfig","bmp");
+			editor->GetPanelChooser()->OpenPanel("PanelConfig", "bmp", { "bmp" });
 		float brightness = editor->engine->GetWindow()->GetBrightness();
 		if (ImGui::SliderFloat("Brightness", &brightness, 0.0f, 1.0f))
 			editor->engine->GetWindow()->AdjustBrightness(brightness);
@@ -150,6 +157,10 @@ bool PanelConfiguration::Update()
 		ImGui::Text("SDL Version:");
 		ImGui::SameLine();
 		ImGui::TextColored(ImVec4(0.8196, 0.7176, 0.6078, 1.0), "%d.%d.%d", engineConfig->sdlVersion.major, engineConfig->sdlVersion.minor, engineConfig->sdlVersion.patch);
+		ImGui::Separator();
+		ImGui::Text("OpenGL Version:");
+		ImGui::SameLine();
+		ImGui::TextColored(ImVec4(0.8196, 0.7176, 0.6078, 1.0), "%s", engineConfig->gpuVersion);
 		ImGui::Separator();
 		ImGui::Text("CPUs:");
 		ImGui::SameLine();
@@ -236,12 +247,16 @@ bool PanelConfiguration::Update()
 		}
 	}
 
+	if (ImGui::CollapsingHeader("Audio"))
+	{
+		if (ImGui::SliderInt("Master Volume", &masterVol, 0, 5))
+			editor->engine->GetAudio()->SetListenerVolume(masterVol, 5);
+
+		std::string str = "Master Volume: " + std::to_string(editor->engine->GetAudio()->GetListenerVolume());
+		ImGui::Text(str.c_str());
+	}
+
 	ImGui::End();
 
-	return true;
-}
-
-bool PanelConfiguration::PostUpdate()
-{
 	return true;
 }

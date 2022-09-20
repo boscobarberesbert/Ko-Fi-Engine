@@ -1,9 +1,7 @@
-#pragma once
-#ifndef SCENE_INTRO_H
-#define SCENE_INTRO_H
+#ifndef __SCENE_INTRO_H__
+#define __SCENE_INTRO_H__
 
 #include "Scene.h"
-//#include "Globals.h"
 #include "JsonHandler.h"
 
 #define MAX_SNAKE 2
@@ -16,26 +14,26 @@ class SceneIntro : public Scene
 {
 public:
 	SceneIntro(KoFiEngine* engine);
-	~SceneIntro();
+	~SceneIntro() override;
 
-	bool Start();
-	bool PreUpdate(float dt);
-	bool Update(float dt);
-	bool PostUpdate(float dt);
+	bool Start() override;
+	bool PreUpdate(float dt) override;
+	bool Update(float dt) override;
+	bool PostUpdate(float dt) override;
 	bool CleanUp();
 
 	void OnCollision(PhysBody3D* body1, PhysBody3D* body2);
+
+	bool switchScene = false;
+	bool quitPlease = false;
+	std::string sceneNameGO;
 
 private:
 	int random = 0;
 	JsonHandler jsonHandler;
 	Json j;
-
 	// Temporal to manage the use of the camera
 	GameObject* camera = nullptr;
-
-
-
 };
 
-#endif SCENE_INTRO_H // SCENE_INTRO_H
+#endif // !__SCENE_INTRO_H__

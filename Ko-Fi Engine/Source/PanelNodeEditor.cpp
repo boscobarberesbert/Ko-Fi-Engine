@@ -1,5 +1,5 @@
 #include "PanelNodeEditor.h"
-#include "Editor.h"
+#include "M_Editor.h"
 #include <fstream>
 #include <ios> // for std::streamsize
 #include "PanelChooser.h"
@@ -10,10 +10,10 @@
 #include "AdditionNode.h"
 
 #include <ImNodes.h>
-PanelNodeEditor::PanelNodeEditor(Editor* editor)
+PanelNodeEditor::PanelNodeEditor(M_Editor* editor)
 {
 	this->editor = editor;
-	panelName = "Node Editor";
+	panelName = "Node M_Editor";
 }
 
 PanelNodeEditor::~PanelNodeEditor()
@@ -26,13 +26,10 @@ bool PanelNodeEditor::Awake()
 	return true;
 }
 
-bool PanelNodeEditor::PreUpdate()
-{
-	return true;
-}
-
 bool PanelNodeEditor::Update()
 {
+    OPTICK_EVENT();
+
 	//Begin window
 	ImGui::Begin(panelName.c_str(), 0);
     if (ImGui::Button("Save")) {
@@ -40,14 +37,14 @@ bool PanelNodeEditor::Update()
     }
     ImGui::SameLine();
     if (ImGui::Button("Load")) {
-        editor->GetPanelChooser()->OpenPanel("NodeEditor", "ini");
+        editor->GetPanelChooser()->OpenPanel("NodeEditor", "ini", {"ini"});
     }
     if (editor->GetPanelChooser()->IsReadyToClose("NodeEditor"))
     {
-        const char* path = editor->GetPanelChooser()->OnChooserClosed();
-        if (path != nullptr)
+        std::string path = editor->GetPanelChooser()->OnChooserClosed();
+        if (!path.empty())
         {
-            LoadNodeEditor(path);
+            LoadNodeEditor(path.c_str());
         }
     }
 	//Begin editor
@@ -104,11 +101,6 @@ bool PanelNodeEditor::Update()
         links.erase(iter);
     }
 	ImGui::End();
-	return true;
-}
-
-bool PanelNodeEditor::PostUpdate()
-{
 	return true;
 }
 

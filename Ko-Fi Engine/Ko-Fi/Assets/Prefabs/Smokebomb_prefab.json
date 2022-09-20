@@ -1,0 +1,132 @@
+{
+    "active": true,
+    "children": [],
+    "components": [
+        {
+            "active": true,
+            "type": 23
+        },
+        {
+            "active": true,
+            "position": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                14.999999046325684,
+                15.0,
+                15.0
+            ],
+            "type": 21
+        },
+        {
+            "active": true,
+            "mesh": {
+                "asset_path": "Assets/Models/Characters/Nerala/nerala_smoke_grenade.sugar",
+                "draw_face_normals": false,
+                "draw_vertex_normals": false,
+                "is_animated": false,
+                "shape_type": 0,
+                "uid": 1821493160
+            },
+            "type": 1
+        },
+        {
+            "active": true,
+            "color": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "shader": {
+                "asset_path": "Assets/Shaders/default_shader.glsl",
+                "uniforms": null
+            },
+            "texture": {
+                "asset_path": "Assets/Textures/Characters/Nerala/nerala_base_color.png"
+            },
+            "type": 2
+        },
+        {
+            "active": true,
+            "file_name": "Assets/Scripts/Characters/Nerala/Smokebomb.lua",
+            "id": 1465207712,
+            "type": 5
+        },
+        {
+            "active": true,
+            "fade_time": 2.0,
+            "offset_sync": false,
+            "total_tracks": 2,
+            "tracks": [
+                {
+                    "bypass": false,
+                    "custom_loop": false,
+                    "loop": false,
+                    "loop_offset": 0.0,
+                    "mute": false,
+                    "offset": 0.0,
+                    "pan": 0.0,
+                    "play_on_start": false,
+                    "track_path": "Assets/Audio/SFX/Nerala/nerala_bomb_activation_fx.wav",
+                    "transpose": 1.0,
+                    "volume": 100.0
+                },
+                {
+                    "bypass": false,
+                    "custom_loop": false,
+                    "loop": true,
+                    "loop_offset": 0.0,
+                    "mute": false,
+                    "offset": 0.0,
+                    "pan": 0.0,
+                    "play_on_start": false,
+                    "track_path": "Assets/Audio/SFX/Nerala/nerala_bomb_smoke_fx.wav",
+                    "transpose": 1.0,
+                    "volume": 100.0
+                }
+            ],
+            "type": 11
+        },
+        {
+            "active": true,
+            "ambientValue": 0.0,
+            "castShadows": false,
+            "constantAttenuationValue": 0.0,
+            "cutOffAngle": 1.0,
+            "diffuseValue": 0.20000000298023224,
+            "lightColor": [
+                0.0,
+                1.0,
+                0.0
+            ],
+            "lightDirection": [
+                1.0,
+                0.0,
+                0.0
+            ],
+            "lightPosition": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "linearAttenuationValue": 0.0,
+            "quadraticAttenuationValue": 0.0,
+            "sourceType": 2,
+            "specularValue": 0.0,
+            "type": 19
+        }
+    ],
+    "is3D": true,
+    "isPrefab": true,
+    "name": "Smokebomb",
+    "tag": 4
+}

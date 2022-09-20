@@ -1,7 +1,9 @@
-#pragma once
+#ifndef __ENGINE_CONFIG_H__
+#define __ENGINE_CONFIG_H__
+
 #include "PerfTimer.h"
 #include "Timer.h"
-#include "SString.h"
+#include <string> 
 #include "SDL.h"
 
 class EngineConfig
@@ -10,6 +12,8 @@ public:
 
 	EngineConfig()
 	{
+		authors = "";
+		license = "";
 		title = "";
 		organization = "";
 		frameCount = 0;
@@ -19,6 +23,8 @@ public:
 		cappedMs = -1;
 	}
 
+	std::string authors;
+	std::string license;
 	std::string title;
 	std::string organization;
 	uint64 frameCount = 0;
@@ -56,3 +62,5 @@ public:
 	bool hasSSE41 = false;
 	bool hasSSE42 = false;
 };
+
+#endif // !__ENGINE_CONFIG_H__

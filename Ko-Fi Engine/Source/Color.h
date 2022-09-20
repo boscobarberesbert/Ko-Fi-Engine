@@ -1,6 +1,7 @@
-#pragma once
-#ifndef COLOR_H
-#define COLOR_H
+#ifndef __COLOR_H__
+#define __COLOR_H__
+
+#include "imgui.h"
 
 struct Color
 {
@@ -24,6 +25,11 @@ struct Color
 	{
 		return (float*)this;
 	}
+
+	ImVec4 ToImVec4()
+	{
+		return ImVec4(r, g, b, a);
+	}
 };
 
 extern Color Red;
@@ -32,4 +38,25 @@ extern Color Blue;
 extern Color Black;
 extern Color White;
 
-#endif //COLOR_H
+struct FadeColor
+{
+	FadeColor() : color(Color(1.0f,1.0f,1.0f,1.0f)), pos(0.5f)
+	{}
+
+	FadeColor(Color c, float p) : color(c), pos(p)
+	{}
+
+	FadeColor(float r, float g, float b, float a, float p) : color(Color(r, g, b, a)), pos(p)
+	{}
+
+	bool operator == (const FadeColor& fc)
+	{
+		return (this->pos == fc.pos && this->color.r == fc.color.r && this->color.g == fc.color.g && this->color.b == fc.color.b && this->color.a == fc.color.a);
+	}
+
+public:
+	float pos;
+	Color color;
+};
+
+#endif // !__COLOR_H__

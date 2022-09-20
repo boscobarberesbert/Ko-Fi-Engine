@@ -1,0 +1,103 @@
+{
+    "Lootable Corpses": {
+        "emitters": [
+            {
+                "loop": true,
+                "maxParticles": 500,
+                "modules": [
+                    {
+                        "maxParticleLife": 3.5,
+                        "minParticleLife": 2.5,
+                        "particlesPerSpawn": 1,
+                        "randomParticleLife": true,
+                        "spawnTime": 0.25,
+                        "type": 1
+                    },
+                    {
+                        "billboardingType": 2,
+                        "frontAxis": true,
+                        "maxDegrees": 360,
+                        "minDegrees": 0,
+                        "sideAxis": false,
+                        "topAxis": false,
+                        "type": 5
+                    },
+                    {
+                        "minInitialSize": [
+                            7.0,
+                            7.0,
+                            7.0
+                        ],
+                        "type": 4
+                    },
+                    {
+                        "followForward": false,
+                        "maxAcceleration": [
+                            0.25,
+                            0.25,
+                            0.25
+                        ],
+                        "maxDirection": [
+                            0.20000000298023224,
+                            1.0,
+                            0.20000000298023224
+                        ],
+                        "maxPosition": [
+                            10.0,
+                            20.0,
+                            10.0
+                        ],
+                        "maxVelocity": 8.0,
+                        "minAcceleration": [
+                            0.0,
+                            -0.029999999329447746,
+                            0.0
+                        ],
+                        "minDirection": [
+                            -0.20000000298023224,
+                            1.0,
+                            -0.20000000298023224
+                        ],
+                        "minPosition": [
+                            -10.0,
+                            0.0,
+                            -10.0
+                        ],
+                        "minVelocity": 6.0,
+                        "randAcceleration": false,
+                        "randDirection": true,
+                        "randPosition": true,
+                        "randVelocity": true,
+                        "type": 2
+                    },
+                    {
+                        "colors": [
+                            {
+                                "color": [
+                                    1.0,
+                                    1.0,
+                                    1.0,
+                                    1.0
+                                ],
+                                "position": 0.0
+                            },
+                            {
+                                "color": [
+                                    1.0,
+                                    1.0,
+                                    1.0,
+                                    0.0
+                                ],
+                                "position": 1.0
+                            }
+                        ],
+                        "type": 3
+                    }
+                ],
+                "name": "Spark",
+                "texture_path": "Assets/Textures/Particles/light_2.png"
+            }
+        ],
+        "name": "Lootable Corpses"
+    }
+}

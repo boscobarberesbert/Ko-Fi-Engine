@@ -1,7 +1,9 @@
-#pragma once
+#ifndef __PANEL_NODE_EDITOR_H__
+#define __PANEL_NODE_EDITOR_H__
+
 #include "Panel.h"
 #include <vector>
-class Editor;
+class M_Editor;
 
 #include "Node.h"
 
@@ -15,14 +17,11 @@ struct Link
 
 class PanelNodeEditor : public Panel {
 public:
-	PanelNodeEditor(Editor* editor);
+	PanelNodeEditor(M_Editor* editor);
 	~PanelNodeEditor();
 
 	bool Awake();
-	bool PreUpdate();
 	bool Update();
-	bool PostUpdate();
-
 
 private:
 	//Node editor functions
@@ -68,7 +67,7 @@ private:
 		return nullptr;
 	}
 private:
-	Editor* editor;
+	M_Editor* editor;
 	std::vector<Node*> nodes;
 	std::vector<Link> links;
 	std::vector<int> selectedNodes;
@@ -77,3 +76,5 @@ private:
 	int hoveredId = 0;
 
 };
+
+#endif // !__PANEL_NODE_EDITOR_H__

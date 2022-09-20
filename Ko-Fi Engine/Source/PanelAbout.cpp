@@ -1,8 +1,10 @@
 #include "PanelAbout.h"
 #include <imgui.h>
-#include "Editor.h"
+#include "M_Editor.h"
 
-PanelAbout::PanelAbout(Editor* editor)
+#include "optick.h"
+
+PanelAbout::PanelAbout(M_Editor* editor)
 {
 	panelName = "About";
 	this->editor = editor;
@@ -17,20 +19,12 @@ bool PanelAbout::Awake()
 	return true;
 }
 
-bool PanelAbout::PreUpdate()
-{
-	return true;
-}
-
 bool PanelAbout::Update()
 {
+	OPTICK_EVENT();
+
 	if(editor->toggleAboutPanel) ShowAboutWindow(&editor->toggleAboutPanel);
 
-	return true;
-}
-
-bool PanelAbout::PostUpdate()
-{
 	return true;
 }
 
@@ -41,6 +35,7 @@ void PanelAbout::ShowAboutWindow(bool* toggleAboutPanel)
 		ImGui::End();
 		return;
 	}
+	/*ImGui::End();*/
 	ImGui::Text("Ko-Fi Engine 0.1 WIP");
 	ImGui::Separator();
 	ImGui::Text("By Alex Avila and Bosco Barber.");

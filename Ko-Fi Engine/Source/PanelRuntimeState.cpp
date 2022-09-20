@@ -1,11 +1,12 @@
 #include "PanelRuntimeState.h"
 #include <imgui.h>
-#include "Editor.h"
+#include "M_Editor.h"
 #include "Engine.h"
-#include "SceneManager.h"
-#include "Input.h"
+#include "M_SceneManager.h"
+#include "M_Camera3D.h"
+#include "M_Input.h"
 
-PanelRuntimeState::PanelRuntimeState(Editor* editor, KoFiEngine* engine)
+PanelRuntimeState::PanelRuntimeState(M_Editor* editor, KoFiEngine* engine)
 {
     panelName = "RuntimeState";
 	this->editor = editor;
@@ -21,20 +22,12 @@ bool PanelRuntimeState::Awake()
 	return true;
 }
 
-bool PanelRuntimeState::PreUpdate()
-{
-	return true;
-}
-
 bool PanelRuntimeState::Update()
 {
+    OPTICK_EVENT();
+
 	DrawRuntimePanel();
 
-	return true;
-}
-
-bool PanelRuntimeState::PostUpdate()
-{
 	return true;
 }
 
@@ -42,32 +35,43 @@ void PanelRuntimeState::DrawRuntimePanel()
 {
     if (ImGui::Begin("Game state"/*, ImVec2(405, 38), true, ImGuiWindowFlags_NoMove*/))
     {
-        SceneManager* sceneManager = engine->GetSceneManager();
-        Input* input = engine->GetInput();
-        RuntimeState state = sceneManager->GetState();
+        M_SceneManager* sceneManager = engine->GetSceneManager();
+        M_Editor* editor = engine->GetEditor();
+        M_Camera3D* camera = engine->GetCamera3D();
+        M_Input* input = engine->GetInput();
+        GameState state = sceneManager->GetGameState();
 
-        if (state == RuntimeState::PLAYING)
+        if (state == GameState::PLAYING)
         {
-            if (ImGui::Button("PAUSE", ImVec2(120, 22)) || input->GetKey(SDL_SCANCODE_F6) == KEY_DOWN)
+            if (ImGui::Button("PAUSE", ImVec2(120, 22)))
                 sceneManager->OnPause();
         }
-        else if (state == RuntimeState::PAUSED)
+        else if (state == GameState::PAUSED)
         {
-            if (ImGui::Button("CONTINUE", ImVec2(120, 22)) || input->GetKey(SDL_SCANCODE_F6) == KEY_DOWN)
+            if (ImGui::Button("CONTINUE", ImVec2(120, 22)))
                 sceneManager->OnResume();
         }
 
         ImGui::SameLine();
 
-        if (state != RuntimeState::PLAYING && state != RuntimeState::PAUSED)
+        if (state != GameState::PLAYING && state != GameState::PAUSED)
         {
-            if (ImGui::Button("PLAY", ImVec2(120, 22)) || input->GetKey(SDL_SCANCODE_F5) == KEY_DOWN)
+            if (ImGui::Button("PLAY", ImVec2(120, 22)))
+            {
                 sceneManager->OnPlay();
+                editor->OnPlay();
+                camera->OnPlay();
+            }
         }
         else
         {
-            if (ImGui::Button("STOP", ImVec2(120, 22)) || input->GetKey(SDL_SCANCODE_F5) == KEY_DOWN)
+            if (ImGui::Button("STOP", ImVec2(120, 22)))
+            {
                 sceneManager->OnStop();
+                _CrtDumpMemoryLeaks();
+                _CrtSetReportMode(_CRT_WARN, _CRTDBG_MODE_DEBUG);
+                camera->OnStop();
+            }
         }
 
         // ADD THESE FEATURES IN THE FUTURE! (And more...)
@@ -80,6 +84,7 @@ void PanelRuntimeState::DrawRuntimePanel()
 
         ImGui::SameLine();
         ImGui::ColorEdit3("Bg", (float*)&camera->background, ImGuiColorEditFlags_NoInputs);*/
+
     }
     ImGui::End();
 }

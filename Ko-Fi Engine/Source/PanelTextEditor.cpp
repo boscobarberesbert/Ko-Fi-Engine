@@ -1,28 +1,39 @@
 #include "PanelTextEditor.h"
-#include "Editor.h"
+// Modules
 #include "Engine.h"
-#include "FileSystem.h"
-#include "PanelChooser.h"
-#include "SceneManager.h"
-#include "ComponentMaterial.h"
+#include "M_Editor.h"
+#include "M_FileSystem.h"
+#include "M_SceneManager.h"
 
-PanelTextEditor::PanelTextEditor(Editor* editor)
+// GameObject
+#include "GameObject.h"
+#include "C_Material.h"
+
+#include "R_Material.h"
+
+#include "SceneIntro.h"
+#include "PanelChooser.h"
+#include "glew.h"
+#include <gl/GL.h>
+#include <gl/GLU.h>
+
+PanelTextEditor::PanelTextEditor(M_Editor* editor)
 {
 	this->editor = editor;
-	panelName = "Text Editor";
-	//Editor configuration
+	panelName = "Text M_Editor";
+	//M_Editor configuration
 	textEditor.SetShowWhitespaces(false);
 	textEditor.SetReadOnly(false);
 	textEditor.SetPalette(TextEditor::GetDarkPalette());
 	textEditor.SetLanguageDefinition(TextEditor::LanguageDefinition::GLSL());
 }
 
-PanelTextEditor::PanelTextEditor(Editor* editor,const char* path)
+PanelTextEditor::PanelTextEditor(M_Editor* editor,const char* path)
 {
 	this->editor = editor;
-	panelName = "Text Editor";
+	panelName = "Text M_Editor";
 	editor->engine->GetFileSystem()->OpenFile(path);
-	//Editor configuration
+	//M_Editor configuration
 	textEditor.SetShowWhitespaces(false);
 	textEditor.SetReadOnly(false);
 	textEditor.SetPalette(TextEditor::GetDarkPalette());
@@ -38,21 +49,12 @@ bool PanelTextEditor::Awake()
 	return true;
 }
 
-bool PanelTextEditor::PreUpdate()
-{
-	return true;
-}
-
 bool PanelTextEditor::Update()
 {
+	OPTICK_EVENT();
+
 	if (editor->toggleTextEditor) RenderWindow(&editor->toggleTextEditor);
 	
-	
-	return true;
-}
-
-bool PanelTextEditor::PostUpdate()
-{
 	return true;
 }
 
@@ -69,22 +71,32 @@ void PanelTextEditor::RenderWindow(bool* toggleEditText)
 			SaveFile(filePath);
 		}
 		textEditor.Render("##EditorWindow");
+
 	}
-
-
 	ImGui::End();
+
+
 }
 
-void PanelTextEditor::LoadFile(std::string path)
+void PanelTextEditor::LoadFile(std::string path,std::string ext)
 {
 	if (path.empty()) {
-		editor->GetPanelChooser()->OpenPanel("TextEditor", "glsl");
+		editor->GetPanelChooser()->OpenPanel("TextEditor", "glsl", {"glsl"});
 	}
 	else {
 		this->filePath = path;
 		std::string text = editor->engine->GetFileSystem()->OpenFile(filePath.c_str());
 		textEditor.SetText(text);
-		
+		if (ext == ".lua")
+		{
+			textEditor.SetLanguageDefinition(TextEditor::LanguageDefinition::Lua());
+		}
+		else
+		{
+			textEditor.SetLanguageDefinition(TextEditor::LanguageDefinition::GLSL());
+		}
+
+
 	}
 
 }
@@ -92,10 +104,15 @@ void PanelTextEditor::LoadFile(std::string path)
 void PanelTextEditor::SaveFile(std::string path)
 {
 	editor->engine->GetFileSystem()->SaveFile(path.c_str(), textEditor.GetText());
-	for (GameObject* go : editor->engine->GetSceneManager()->GetCurrentScene()->gameObjectList) {
-		if (go->GetComponent<ComponentMaterial>() != nullptr) {
-			go->GetComponent<ComponentMaterial>()->Compile();
+	for (GameObject* go : editor->engine->GetSceneManager()->GetCurrentScene()->gameObjectList)
+	{
+		if (go->GetComponent<C_Material>() != nullptr)
+		{
+			R_Material* material = go->GetComponent<C_Material>()->GetMaterial();
+			if (material->shaderProgramID != 0)
+				glDeleteProgram(material->shaderProgramID);
 
+			Importer::GetInstance()->materialImporter->LoadAndCreateShader(material->GetAssetPath(), material);
 		}
 	}
 }
@@ -103,17 +120,15 @@ void PanelTextEditor::SaveFile(std::string path)
 void PanelTextEditor::Focus()
 {
 	ImGui::SetWindowFocus(panelName.c_str());
-
-
 }
 
 void PanelTextEditor::ChooserListener()
 {
 	if (editor->GetPanelChooser()->IsReadyToClose("TextEditor")) {
-		if (editor->GetPanelChooser()->OnChooserClosed() != nullptr) {
-			const char* path = editor->GetPanelChooser()->OnChooserClosed();
+		if (!editor->GetPanelChooser()->OnChooserClosed().empty()) {
+			std::string path = editor->GetPanelChooser()->OnChooserClosed();
 			this->filePath = path;
-			std::string text = editor->engine->GetFileSystem()->OpenFile(path);
+			std::string text = editor->engine->GetFileSystem()->OpenFile(path.c_str());
 			textEditor.SetText(text);
 		}
 	}

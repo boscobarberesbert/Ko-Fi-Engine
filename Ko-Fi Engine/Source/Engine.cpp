@@ -1,50 +1,78 @@
+#ifndef KOFI_GAME
+#define _CRTDBG_MAP_ALLOC
+#include <stdlib.h>
+#include <crtdbg.h>
+#endif // !KOFI_GAME
+
+
+
+
 #include "Engine.h"
 
-#include "Window.h"
-#include "Input.h"
-#include "Renderer3D.h"
-#include "Camera3D.h"
-#include "SceneManager.h"
-#include "Editor.h"
-#include "FileSystem.h"
-#include "ViewportFrameBuffer.h"
+#include "M_Window.h"
+#include "M_Input.h"
+#include "M_Renderer3D.h"
+#include "M_Camera3D.h"
+#include "M_SceneManager.h"
+#include "M_Editor.h"
+#include "M_FileSystem.h"
+#include "FSDefs.h"
+#include "M_UI.h"
 #include "Importer.h"
-#include "Defs.h"
+#include "Globals.h"
 #include "Log.h"
 #include "ImGuiAppLog.h"
+#include "M_Physics.h"
+#include "M_ResourceManager.h"
+#include "M_Audio.h"
+#include "M_Navigation.h"
 
 #include <iostream>
 #include <sstream>
 
 #include "glew.h"
+#include "optick.h"
 
 // Constructor
 KoFiEngine::KoFiEngine(int argc, char* args[]) : argc(argc), args(args)
 {
+#ifndef KOFI_GAME
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+	_CrtSetReportMode(_CRT_WARN | _CRT_ERROR , _CRTDBG_MODE_DEBUG);
+#endif // !KOFI_GAME
+
 	engineConfig = new EngineConfig();
 	PERF_START(ptimer);
-	Importer::GetInstance()->SetEngine(this);
-	window = new Window(this);
-	fileSystem = new FileSystem(this);
-	input = new Input(this);
-	camera = new Camera3D(this);
-	renderer = new Renderer3D(this);
-	editor = new Editor(this);
-	sceneManager = new SceneManager(this);
-	viewportBuffer = new ViewportFrameBuffer(this);
+	Importer::GetInstance(this);
+	window = new M_Window(this);
+	fileSystem = new M_FileSystem(this);
+	input = new M_Input(this);
+	audio = new M_Audio(this);
+	camera = new M_Camera3D(this);
+	renderer = new M_Renderer3D(this);
+	editor = new M_Editor(this);
+	sceneManager = new M_SceneManager(this);
+	ui = new M_UI(this);
+	//viewportBuffer = new ViewportFrameBuffer(this);
+	physics = new M_Physics(this);
+	resourceManager = new M_ResourceManager(this);
+	navigation = new M_Navigation(this);
 
 	// Ordered for awake / Start / Update
 	// Reverse order of CleanUp
 	AddModule(window);
+	AddModule(physics);
 	AddModule(input);
+	AddModule(audio);
 	AddModule(camera);
 	AddModule(fileSystem);
+	AddModule(resourceManager);
+	AddModule(ui);
 	AddModule(sceneManager);
-	AddModule(viewportBuffer);
-	AddModule(editor);
 
-	// Render last to swap buffer
+	AddModule(navigation);
 	AddModule(renderer);
+	AddModule(editor);
 
 	PERF_PEEK(ptimer);
 }
@@ -53,7 +81,7 @@ KoFiEngine::KoFiEngine(int argc, char* args[]) : argc(argc), args(args)
 KoFiEngine::~KoFiEngine()
 {
 	// Release modules
-	for (std::list<Module*>::reverse_iterator item = modules.rbegin(); item != modules.rend(); ++item)
+	for (auto item = modules.rbegin(); item != modules.rend(); ++item)
 	{
 		RELEASE(*item);
 	}
@@ -91,19 +119,23 @@ bool KoFiEngine::Awake()
 		ret = true;
 		jsonConfigEngine = jsonConfig.at("Engine");
 
+		engineConfig->authors = jsonConfigEngine.at("Authors").get<std::string>().c_str();
+		engineConfig->license = jsonConfigEngine.at("License").get<std::string>().c_str();
 		engineConfig->title = jsonConfigEngine.at("Title").get<std::string>().c_str();
-		engineConfig->organization = jsonConfigEngine.at("Organization").dump(4).c_str();
+		engineConfig->organization = jsonConfigEngine.at("Organization").get<std::string>().c_str();
 		engineConfig->maxFps = jsonConfigEngine.at("MaxFPS");
 		if (engineConfig->maxFps > 0) engineConfig->cappedMs = 1000 / engineConfig->maxFps;
 	}
 
 	if (ret == true)
 	{
-		std::list<Module*>::iterator item = modules.begin();;
+		auto item = modules.begin();
 
 		while (item != modules.end() && ret)
 		{
-			ret = (*item)->Awake(jsonConfig.at((*item)->name.GetString()));
+			if (jsonConfig.contains((*item)->name))
+				ret = (*item)->Awake(jsonConfig.at((*item)->name));
+
 			item++;
 		}
 	}
@@ -123,11 +155,13 @@ bool KoFiEngine::Start()
 	// Setting hardware info
 	SetHardwareInfo();
 
-	std::list<Module*>::iterator item = modules.begin();;
 
-	while (item != modules.end() && ret)
+
+
+	for (auto item : modules)
 	{
-		ret = (*item)->Start();
+		ret = item->Start();
+		if (!ret) break;
 		item++;
 	}
 
@@ -140,6 +174,9 @@ bool KoFiEngine::Start()
 bool KoFiEngine::Update()
 {
 	bool ret = true;
+
+	OPTICK_FRAME("MainThread");
+
 	PrepareUpdate();
 
 	/*if (input->GetWindowEvent(WE_QUIT) == true)
@@ -161,6 +198,8 @@ bool KoFiEngine::Update()
 // ---------------------------------------------
 void KoFiEngine::PrepareUpdate()
 {
+	OPTICK_EVENT();
+
 	engineConfig->frameCount++;
 	engineConfig->lastSecFrameCount++;
 
@@ -172,6 +211,8 @@ void KoFiEngine::PrepareUpdate()
 // ---------------------------------------------
 void KoFiEngine::FinishUpdate()
 {
+	OPTICK_EVENT();
+
 	if (engineConfig->lastSecFrameTime.Read() > 1000)
 	{
 		engineConfig->lastSecFrameTime.Start();
@@ -187,7 +228,7 @@ void KoFiEngine::FinishUpdate()
 	static char title[256];
 	sprintf_s(title, 256, "Av.FPS: %.2f Last Frame Ms: %02u Last sec frames: %i Last dt: %.3f Time since startup: %.3f Frame Count: %I64u ",
 		averageFps, lastFrameMs, framesOnLastUpdate, engineConfig->dt, secondsSinceStartup, engineConfig->frameCount);
-
+	//KOFI_DEBUG("FPS: %f", averageFps);
 	engineConfig->fpsLog.push_back(engineConfig->prevLastSecFrameCount);
 	if (engineConfig->fpsLog.size() > 100)
 		engineConfig->fpsLog.erase(engineConfig->fpsLog.begin());
@@ -214,16 +255,16 @@ bool KoFiEngine::PreUpdate()
 {
 	bool ret = true;
 
-	std::list<Module*>::iterator item;
 	Module* pModule = NULL;
 
-	for (item = modules.begin(); item != modules.end() && ret == true; ++item)
+	for (auto item = modules.begin(); item != modules.end() && ret == true; ++item)
 	{
 		pModule = *item;
 
 		if (pModule->active == false) {
 			continue;
 		}
+
 
 		ret = (*item)->PreUpdate(engineConfig->dt);
 	}
@@ -235,7 +276,7 @@ bool KoFiEngine::PreUpdate()
 bool KoFiEngine::DoUpdate()
 {
 	bool ret = true;
-	std::list<Module*>::iterator item = modules.begin();
+	auto item = modules.begin();
 	Module* pModule = NULL;
 
 	for (item = modules.begin(); item != modules.end() && ret == true; ++item)
@@ -258,10 +299,9 @@ bool KoFiEngine::DoUpdate()
 bool KoFiEngine::PostUpdate()
 {
 	bool ret = true;
-	std::list<Module*>::iterator item;
 	Module* pModule = NULL;
 
-	for (item = modules.begin(); item != modules.end() && ret == true; ++item)
+	for (auto item = modules.begin(); item != modules.end() && ret == true; ++item)
 	{
 		pModule = *item;
 
@@ -280,7 +320,7 @@ bool KoFiEngine::CleanUp()
 {
 	bool ret = true;
 
-	for (std::list<Module*>::reverse_iterator item = modules.rbegin(); item != modules.rend() && ret == true; ++item)
+	for (auto item = modules.rbegin(); item != modules.rend() && ret == true; ++item)
 	{
 		ret = (*item)->CleanUp();
 	}
@@ -292,6 +332,32 @@ bool KoFiEngine::CleanUp()
 int KoFiEngine::GetArgc() const
 {
 	return argc;
+}
+
+bool KoFiEngine::SaveConfiguration() const
+{
+	bool ret = true;
+	JsonHandler jsonHandler;
+	Json jsonConfig;
+	Json configEngine;
+	configEngine["Authors"] = engineConfig->authors;
+	configEngine["License"] = engineConfig->license;
+	configEngine["Organization"] = engineConfig->organization;
+	configEngine["Title"] = engineConfig->title;
+	configEngine["MaxFPS"] = engineConfig->maxFps;
+	jsonConfig["Engine"]=configEngine;
+
+	for (Module* module : modules)
+	{
+		Json configModule;
+		module->SaveConfiguration(configModule);
+		jsonConfig[module->name.c_str()] = configModule;
+	}
+
+
+	jsonHandler.SaveJson(jsonConfig, "EngineConfig/config.json");
+
+	return ret;
 }
 
 // ---------------------------------------
@@ -363,42 +429,67 @@ EngineConfig* KoFiEngine::GetEngineConfig()
 	return this->engineConfig;
 }
 
-Window* KoFiEngine::GetWindow() const
+M_Window* KoFiEngine::GetWindow() const
 {
 	return this->window;
 }
 
-Input* KoFiEngine::GetInput()const
+M_Input* KoFiEngine::GetInput()const
 {
 	return this->input;
 }
 
-SceneManager* KoFiEngine::GetSceneManager()const
+M_SceneManager* KoFiEngine::GetSceneManager()const
 {
 	return this->sceneManager;
 }
 
-Renderer3D* KoFiEngine::GetRenderer()const
+M_Renderer3D* KoFiEngine::GetRenderer()const
 {
 	return this->renderer;
 }
 
-Camera3D* KoFiEngine::GetCamera3D()const
+M_Camera3D* KoFiEngine::GetCamera3D()const
 {
 	return this->camera;
 }
 
-Editor* KoFiEngine::GetEditor()const
+M_Editor* KoFiEngine::GetEditor()const
 {
 	return this->editor;
 }
 
-FileSystem* KoFiEngine::GetFileSystem()const
+M_FileSystem* KoFiEngine::GetFileSystem()const
 {
 	return this->fileSystem;
 }
 
-ViewportFrameBuffer* KoFiEngine::GetViewportFrameBuffer()const
+M_Physics* KoFiEngine::GetPhysics()const
 {
-	return this->viewportBuffer;
+	return this->physics;
 }
+M_UI* KoFiEngine::GetUI() const
+{
+	return this->ui;
+}
+CollisionDetector* KoFiEngine::GetCollisionDetector() const
+{
+	return this->collisionDetector;
+}
+
+M_ResourceManager* KoFiEngine::GetResourceManager() const
+{
+	return this->resourceManager;
+}
+
+M_Navigation* KoFiEngine::GetNavigation() const
+{
+	return this->navigation;
+}
+
+M_Audio* KoFiEngine::GetAudio() const
+{
+	return this->audio;
+}
+
+

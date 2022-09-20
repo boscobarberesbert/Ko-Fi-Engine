@@ -1,13 +1,17 @@
-#pragma once
+#ifndef __MAINBAR_H__
+#define __MAINBAR_H__
+
 #include "Panel.h"
 
-class Editor;
+class M_Editor;
 class Importer;
+class GameObject;
+enum class Shape;
 
 class MainBar : public Panel
 {
 public:
-	MainBar(Editor* editor);
+	MainBar(M_Editor* editor);
 	~MainBar();
 
 	bool Awake();
@@ -15,9 +19,17 @@ public:
 	bool Update();
 	bool PostUpdate();
 
-	void ImportModel();
+	void ChoosersListener();
+
+	void CreatePrimitive(Shape shape);
+
+	
+	bool CloseAppPopup();
 
 private:
-	Editor* editor;
+	M_Editor* editor;
 	bool loadingModel = false;
+
 };
+
+#endif // !__MAINBAR_H__

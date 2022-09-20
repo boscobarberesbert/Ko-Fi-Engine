@@ -1,0 +1,103 @@
+{
+    "Impact Feedback": {
+        "emitters": [
+            {
+                "loop": true,
+                "maxParticles": 500,
+                "modules": [
+                    {
+                        "maxParticleLife": 3.0,
+                        "minParticleLife": 0.20000000298023224,
+                        "particlesPerSpawn": 1,
+                        "randomParticleLife": false,
+                        "spawnTime": 1.2000000476837158,
+                        "type": 1
+                    },
+                    {
+                        "billboardingType": 2,
+                        "frontAxis": false,
+                        "maxDegrees": 180,
+                        "minDegrees": 0,
+                        "sideAxis": false,
+                        "topAxis": true,
+                        "type": 5
+                    },
+                    {
+                        "followForward": false,
+                        "maxAcceleration": [
+                            0.25,
+                            0.25,
+                            0.25
+                        ],
+                        "maxDirection": [
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "maxPosition": [
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "maxVelocity": 5.0,
+                        "minAcceleration": [
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "minDirection": [
+                            1.0,
+                            1.0,
+                            1.0
+                        ],
+                        "minPosition": [
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "minVelocity": 0.0,
+                        "randAcceleration": false,
+                        "randDirection": true,
+                        "randPosition": false,
+                        "randVelocity": false,
+                        "type": 2
+                    },
+                    {
+                        "colors": [
+                            {
+                                "color": [
+                                    1.0,
+                                    1.0,
+                                    1.0,
+                                    0.7843137383460999
+                                ],
+                                "position": 0.5
+                            },
+                            {
+                                "color": [
+                                    1.0,
+                                    1.0,
+                                    1.0,
+                                    0.0
+                                ],
+                                "position": 1.0
+                            }
+                        ],
+                        "type": 3
+                    },
+                    {
+                        "minInitialSize": [
+                            15.0,
+                            15.0,
+                            15.0
+                        ],
+                        "type": 4
+                    }
+                ],
+                "name": "Hit",
+                "texture_path": "Assets/Textures/Particles/light_2.png"
+            }
+        ],
+        "name": "Impact Feedback"
+    }
+}

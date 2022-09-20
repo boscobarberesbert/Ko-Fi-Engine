@@ -1,21 +1,23 @@
-#pragma once
+#ifndef __PANEL_ABOUT_H__
+#define __PANEL_ABOUT_H__
+
 #include "Panel.h"
 
-class Editor;
+class M_Editor;
 
 class PanelAbout : public Panel
 {
 public:
-	PanelAbout(Editor* editor);
+	PanelAbout(M_Editor* editor);
 	~PanelAbout();
 
 	bool Awake();
-	bool PreUpdate();
 	bool Update();
-	bool PostUpdate();
 
 	void ShowAboutWindow(bool* toggleAboutPanel);
 
 private:
-	Editor* editor = nullptr;
+	M_Editor* editor = nullptr;
 };
+
+#endif // !__PANEL_ABOUT_H__

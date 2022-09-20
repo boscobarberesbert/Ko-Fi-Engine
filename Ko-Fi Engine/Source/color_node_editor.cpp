@@ -95,7 +95,7 @@ ImU32 evaluate(const Graph<Node>& graph, const int root_node)
         {
             // If the edge does not have an edge connecting to another node, then just use the value
             // at this node. It means the node's input pin has not been connected to anything and
-            // the value comes from the node's UI.
+            // the value comes from the node's M_UI.
             if (graph.num_edges_from_node(id) == 0ull)
             {
                 value_stack.push(node.value);
@@ -202,11 +202,10 @@ public:
         // Handle new nodes
         // These are driven by the user, so we place this code before rendering the nodes
         {
-            const bool open_popup = 
-                                    ImGui::IsMouseClicked(1);
+            const bool open_popup = ImGui::IsMouseClicked(1);
 
             ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(8.f, 8.f));
-            if ( open_popup)
+            if (open_popup)
             {
                 ImGui::OpenPopup("add node");
             }

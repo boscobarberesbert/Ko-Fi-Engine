@@ -1,0 +1,2060 @@
+{
+    "active": true,
+    "children": [
+        {
+            "active": true,
+            "children": [
+                {
+                    "active": true,
+                    "children": [
+                        {
+                            "active": true,
+                            "children": [
+                                {
+                                    "active": true,
+                                    "children": [
+                                        {
+                                            "active": true,
+                                            "children": [
+                                                {
+                                                    "active": true,
+                                                    "children": [
+                                                        {
+                                                            "active": true,
+                                                            "children": [
+                                                                {
+                                                                    "active": true,
+                                                                    "children": [
+                                                                        {
+                                                                            "active": true,
+                                                                            "children": [
+                                                                                {
+                                                                                    "active": true,
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "active": true,
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "active": true,
+                                                                                                    "children": [
+                                                                                                        {
+                                                                                                            "active": true,
+                                                                                                            "children": [],
+                                                                                                            "components": [
+                                                                                                                {
+                                                                                                                    "active": true,
+                                                                                                                    "type": 23
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "active": true,
+                                                                                                                    "position": [
+                                                                                                                        5.343292236328125,
+                                                                                                                        15.800352096557617,
+                                                                                                                        -12.914466857910156
+                                                                                                                    ],
+                                                                                                                    "rotation": [
+                                                                                                                        0.13607226312160492,
+                                                                                                                        0.028423989191651344,
+                                                                                                                        -0.07115155458450317,
+                                                                                                                        0.9877316951751709
+                                                                                                                    ],
+                                                                                                                    "scale": [
+                                                                                                                        1.0,
+                                                                                                                        0.9999999403953552,
+                                                                                                                        1.0
+                                                                                                                    ],
+                                                                                                                    "type": 21
+                                                                                                                }
+                                                                                                            ],
+                                                                                                            "is3D": true,
+                                                                                                            "isPrefab": false,
+                                                                                                            "name": "harkonnen_right_hand_index_4",
+                                                                                                            "tag": 0
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "components": [
+                                                                                                        {
+                                                                                                            "active": true,
+                                                                                                            "type": 23
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "active": true,
+                                                                                                            "position": [
+                                                                                                                9.740966796875,
+                                                                                                                22.702823638916016,
+                                                                                                                -19.85620880126953
+                                                                                                            ],
+                                                                                                            "rotation": [
+                                                                                                                -0.032730866223573685,
+                                                                                                                -0.07084371149539948,
+                                                                                                                -0.098617322742939,
+                                                                                                                0.9920607209205627
+                                                                                                            ],
+                                                                                                            "scale": [
+                                                                                                                0.9999989867210388,
+                                                                                                                1.0,
+                                                                                                                0.9999999403953552
+                                                                                                            ],
+                                                                                                            "type": 21
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "is3D": true,
+                                                                                                    "isPrefab": false,
+                                                                                                    "name": "harkonnen_right_hand_index_3",
+                                                                                                    "tag": 0
+                                                                                                }
+                                                                                            ],
+                                                                                            "components": [
+                                                                                                {
+                                                                                                    "active": true,
+                                                                                                    "type": 23
+                                                                                                },
+                                                                                                {
+                                                                                                    "active": true,
+                                                                                                    "position": [
+                                                                                                        -8.58306884765625e-05,
+                                                                                                        21.038658142089844,
+                                                                                                        0.000171661376953125
+                                                                                                    ],
+                                                                                                    "rotation": [
+                                                                                                        0.31813159584999084,
+                                                                                                        -0.06115604192018509,
+                                                                                                        -0.011443553492426872,
+                                                                                                        0.9460027813911438
+                                                                                                    ],
+                                                                                                    "scale": [
+                                                                                                        0.9999961256980896,
+                                                                                                        1.0000001192092896,
+                                                                                                        0.9999992847442627
+                                                                                                    ],
+                                                                                                    "type": 21
+                                                                                                }
+                                                                                            ],
+                                                                                            "is3D": true,
+                                                                                            "isPrefab": false,
+                                                                                            "name": "harkonnen_right_hand_index_2",
+                                                                                            "tag": 0
+                                                                                        }
+                                                                                    ],
+                                                                                    "components": [
+                                                                                        {
+                                                                                            "active": true,
+                                                                                            "type": 23
+                                                                                        },
+                                                                                        {
+                                                                                            "active": true,
+                                                                                            "position": [
+                                                                                                0.00017547607421875,
+                                                                                                31.114044189453125,
+                                                                                                0.00017547607421875
+                                                                                            ],
+                                                                                            "rotation": [
+                                                                                                0.1396820843219757,
+                                                                                                -0.7725882530212402,
+                                                                                                -0.10178233683109283,
+                                                                                                0.6109309792518616
+                                                                                            ],
+                                                                                            "scale": [
+                                                                                                1.000001311302185,
+                                                                                                0.999999463558197,
+                                                                                                1.000001311302185
+                                                                                            ],
+                                                                                            "type": 21
+                                                                                        }
+                                                                                    ],
+                                                                                    "is3D": true,
+                                                                                    "isPrefab": false,
+                                                                                    "name": "harkonnen_right_hand_index_1",
+                                                                                    "tag": 0
+                                                                                },
+                                                                                {
+                                                                                    "active": true,
+                                                                                    "children": [],
+                                                                                    "components": [
+                                                                                        {
+                                                                                            "active": true,
+                                                                                            "type": 23
+                                                                                        },
+                                                                                        {
+                                                                                            "active": true,
+                                                                                            "position": [
+                                                                                                -22.827728271484375,
+                                                                                                31.673402786254883,
+                                                                                                11.798851013183594
+                                                                                            ],
+                                                                                            "rotation": [
+                                                                                                -0.5681073069572449,
+                                                                                                0.369046688079834,
+                                                                                                -0.41338616609573364,
+                                                                                                0.6084163784980774
+                                                                                            ],
+                                                                                            "scale": [
+                                                                                                1.0,
+                                                                                                0.9999985098838806,
+                                                                                                1.0000001192092896
+                                                                                            ],
+                                                                                            "type": 21
+                                                                                        }
+                                                                                    ],
+                                                                                    "is3D": true,
+                                                                                    "isPrefab": false,
+                                                                                    "name": "harkonnen_weapon",
+                                                                                    "tag": 0
+                                                                                }
+                                                                            ],
+                                                                            "components": [
+                                                                                {
+                                                                                    "active": true,
+                                                                                    "type": 23
+                                                                                },
+                                                                                {
+                                                                                    "active": true,
+                                                                                    "position": [
+                                                                                        -0.0001983642578125,
+                                                                                        116.74336242675781,
+                                                                                        8.7738037109375e-05
+                                                                                    ],
+                                                                                    "rotation": [
+                                                                                        0.09021233022212982,
+                                                                                        -0.07045178860425949,
+                                                                                        -0.07021251320838928,
+                                                                                        0.9909432530403137
+                                                                                    ],
+                                                                                    "scale": [
+                                                                                        1.0,
+                                                                                        1.0,
+                                                                                        1.0
+                                                                                    ],
+                                                                                    "type": 21
+                                                                                }
+                                                                            ],
+                                                                            "is3D": true,
+                                                                            "isPrefab": false,
+                                                                            "name": "harkonnen_right_hand",
+                                                                            "tag": 0
+                                                                        }
+                                                                    ],
+                                                                    "components": [
+                                                                        {
+                                                                            "active": true,
+                                                                            "type": 23
+                                                                        },
+                                                                        {
+                                                                            "active": true,
+                                                                            "position": [
+                                                                                -1.1444091796875e-05,
+                                                                                131.3066864013672,
+                                                                                2.288818359375e-05
+                                                                            ],
+                                                                            "rotation": [
+                                                                                0.020632348954677582,
+                                                                                0.008331677876412868,
+                                                                                -0.07717396318912506,
+                                                                                0.9967693090438843
+                                                                            ],
+                                                                            "scale": [
+                                                                                0.9999998807907104,
+                                                                                0.9999986290931702,
+                                                                                1.0
+                                                                            ],
+                                                                            "type": 21
+                                                                        }
+                                                                    ],
+                                                                    "is3D": true,
+                                                                    "isPrefab": false,
+                                                                    "name": "harkonnen_right_fore_arm",
+                                                                    "tag": 0
+                                                                }
+                                                            ],
+                                                            "components": [
+                                                                {
+                                                                    "active": true,
+                                                                    "type": 23
+                                                                },
+                                                                {
+                                                                    "active": true,
+                                                                    "position": [
+                                                                        3.24249267578125e-05,
+                                                                        85.53252410888672,
+                                                                        1.71661376953125e-05
+                                                                    ],
+                                                                    "rotation": [
+                                                                        0.4356582462787628,
+                                                                        0.1270628571510315,
+                                                                        -0.27138620615005493,
+                                                                        0.8487676382064819
+                                                                    ],
+                                                                    "scale": [
+                                                                        0.9999998807907104,
+                                                                        0.9999999403953552,
+                                                                        0.9999997019767761
+                                                                    ],
+                                                                    "type": 21
+                                                                }
+                                                            ],
+                                                            "is3D": true,
+                                                            "isPrefab": false,
+                                                            "name": "harkonnen_right_arm",
+                                                            "tag": 0
+                                                        }
+                                                    ],
+                                                    "components": [
+                                                        {
+                                                            "active": true,
+                                                            "type": 23
+                                                        },
+                                                        {
+                                                            "active": true,
+                                                            "position": [
+                                                                -41.44790267944336,
+                                                                70.30755615234375,
+                                                                -0.30914831161499023
+                                                            ],
+                                                            "rotation": [
+                                                                0.5708230137825012,
+                                                                -0.44199687242507935,
+                                                                0.5289730429649353,
+                                                                0.4460800588130951
+                                                            ],
+                                                            "scale": [
+                                                                1.0,
+                                                                1.0000001192092896,
+                                                                1.0
+                                                            ],
+                                                            "type": 21
+                                                        }
+                                                    ],
+                                                    "is3D": true,
+                                                    "isPrefab": false,
+                                                    "name": "harkonnen_right_shoulder",
+                                                    "tag": 0
+                                                },
+                                                {
+                                                    "active": true,
+                                                    "children": [
+                                                        {
+                                                            "active": true,
+                                                            "children": [
+                                                                {
+                                                                    "active": true,
+                                                                    "children": [
+                                                                        {
+                                                                            "active": true,
+                                                                            "children": [
+                                                                                {
+                                                                                    "active": true,
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "active": true,
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "active": true,
+                                                                                                    "children": [
+                                                                                                        {
+                                                                                                            "active": true,
+                                                                                                            "children": [],
+                                                                                                            "components": [
+                                                                                                                {
+                                                                                                                    "active": true,
+                                                                                                                    "type": 23
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "active": true,
+                                                                                                                    "position": [
+                                                                                                                        -9.354827880859375,
+                                                                                                                        21.176681518554688,
+                                                                                                                        -9.77450942993164
+                                                                                                                    ],
+                                                                                                                    "rotation": [
+                                                                                                                        0.0,
+                                                                                                                        0.0,
+                                                                                                                        0.0,
+                                                                                                                        1.0
+                                                                                                                    ],
+                                                                                                                    "scale": [
+                                                                                                                        1.0,
+                                                                                                                        1.0,
+                                                                                                                        1.0
+                                                                                                                    ],
+                                                                                                                    "type": 21
+                                                                                                                }
+                                                                                                            ],
+                                                                                                            "is3D": true,
+                                                                                                            "isPrefab": false,
+                                                                                                            "name": "harkonnen_left_hand_index_4",
+                                                                                                            "tag": 0
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "components": [
+                                                                                                        {
+                                                                                                            "active": true,
+                                                                                                            "type": 23
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "active": true,
+                                                                                                            "position": [
+                                                                                                                -8.340429306030273,
+                                                                                                                25.495595932006836,
+                                                                                                                -16.796083450317383
+                                                                                                            ],
+                                                                                                            "rotation": [
+                                                                                                                -0.07949161529541016,
+                                                                                                                -0.019188014790415764,
+                                                                                                                0.020565656945109367,
+                                                                                                                0.9964386820793152
+                                                                                                            ],
+                                                                                                            "scale": [
+                                                                                                                1.0,
+                                                                                                                1.0,
+                                                                                                                1.0
+                                                                                                            ],
+                                                                                                            "type": 21
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "is3D": true,
+                                                                                                    "isPrefab": false,
+                                                                                                    "name": "harkonnen_left_hand_index_3",
+                                                                                                    "tag": 0
+                                                                                                }
+                                                                                            ],
+                                                                                            "components": [
+                                                                                                {
+                                                                                                    "active": true,
+                                                                                                    "type": 23
+                                                                                                },
+                                                                                                {
+                                                                                                    "active": true,
+                                                                                                    "position": [
+                                                                                                        0.00028705596923828125,
+                                                                                                        21.882112503051758,
+                                                                                                        -1.1444091796875e-05
+                                                                                                    ],
+                                                                                                    "rotation": [
+                                                                                                        0.2645970284938812,
+                                                                                                        0.02644963003695011,
+                                                                                                        -0.04140203073620796,
+                                                                                                        0.9631068110466003
+                                                                                                    ],
+                                                                                                    "scale": [
+                                                                                                        1.0,
+                                                                                                        0.9999997615814209,
+                                                                                                        1.0
+                                                                                                    ],
+                                                                                                    "type": 21
+                                                                                                }
+                                                                                            ],
+                                                                                            "is3D": true,
+                                                                                            "isPrefab": false,
+                                                                                            "name": "harkonnen_left_hand_index_2",
+                                                                                            "tag": 0
+                                                                                        }
+                                                                                    ],
+                                                                                    "components": [
+                                                                                        {
+                                                                                            "active": true,
+                                                                                            "type": 23
+                                                                                        },
+                                                                                        {
+                                                                                            "active": true,
+                                                                                            "position": [
+                                                                                                -2.7179718017578125e-05,
+                                                                                                26.70417022705078,
+                                                                                                2.491474151611328e-05
+                                                                                            ],
+                                                                                            "rotation": [
+                                                                                                0.11508113145828247,
+                                                                                                0.9834948182106018,
+                                                                                                -0.0677960067987442,
+                                                                                                -0.12205749750137329
+                                                                                            ],
+                                                                                            "scale": [
+                                                                                                1.0000005960464478,
+                                                                                                0.9999999403953552,
+                                                                                                1.0000008344650269
+                                                                                            ],
+                                                                                            "type": 21
+                                                                                        }
+                                                                                    ],
+                                                                                    "is3D": true,
+                                                                                    "isPrefab": false,
+                                                                                    "name": "harkonnen_left_hand_index_1",
+                                                                                    "tag": 0
+                                                                                }
+                                                                            ],
+                                                                            "components": [
+                                                                                {
+                                                                                    "active": true,
+                                                                                    "type": 23
+                                                                                },
+                                                                                {
+                                                                                    "active": true,
+                                                                                    "position": [
+                                                                                        6.732344627380371e-05,
+                                                                                        116.7103271484375,
+                                                                                        -0.0001232624053955078
+                                                                                    ],
+                                                                                    "rotation": [
+                                                                                        0.29371586441993713,
+                                                                                        -0.7217778563499451,
+                                                                                        0.1572335809469223,
+                                                                                        0.6066673994064331
+                                                                                    ],
+                                                                                    "scale": [
+                                                                                        1.0000003576278687,
+                                                                                        0.9999998211860657,
+                                                                                        1.0000001192092896
+                                                                                    ],
+                                                                                    "type": 21
+                                                                                }
+                                                                            ],
+                                                                            "is3D": true,
+                                                                            "isPrefab": false,
+                                                                            "name": "harkonnen_left_hand_index",
+                                                                            "tag": 0
+                                                                        }
+                                                                    ],
+                                                                    "components": [
+                                                                        {
+                                                                            "active": true,
+                                                                            "type": 23
+                                                                        },
+                                                                        {
+                                                                            "active": true,
+                                                                            "position": [
+                                                                                0.00028133392333984375,
+                                                                                139.0621795654297,
+                                                                                0.00011451449245214462
+                                                                            ],
+                                                                            "rotation": [
+                                                                                0.02199690230190754,
+                                                                                -0.007851422764360905,
+                                                                                0.10048642754554749,
+                                                                                0.9946642518043518
+                                                                            ],
+                                                                            "scale": [
+                                                                                1.0,
+                                                                                1.0,
+                                                                                1.0
+                                                                            ],
+                                                                            "type": 21
+                                                                        }
+                                                                    ],
+                                                                    "is3D": true,
+                                                                    "isPrefab": false,
+                                                                    "name": "harkonnen_left_fore_arm",
+                                                                    "tag": 0
+                                                                }
+                                                            ],
+                                                            "components": [
+                                                                {
+                                                                    "active": true,
+                                                                    "type": 23
+                                                                },
+                                                                {
+                                                                    "active": true,
+                                                                    "position": [
+                                                                        0.00012874603271484375,
+                                                                        84.87814331054688,
+                                                                        -0.0003910064697265625
+                                                                    ],
+                                                                    "rotation": [
+                                                                        0.41739949584007263,
+                                                                        -0.10782776772975922,
+                                                                        0.11442233622074127,
+                                                                        0.8950186371803284
+                                                                    ],
+                                                                    "scale": [
+                                                                        1.0,
+                                                                        1.0,
+                                                                        0.9999999403953552
+                                                                    ],
+                                                                    "type": 21
+                                                                }
+                                                            ],
+                                                            "is3D": true,
+                                                            "isPrefab": false,
+                                                            "name": "harkonnen_left_arm",
+                                                            "tag": 0
+                                                        }
+                                                    ],
+                                                    "components": [
+                                                        {
+                                                            "active": true,
+                                                            "type": 23
+                                                        },
+                                                        {
+                                                            "active": true,
+                                                            "position": [
+                                                                41.44792175292969,
+                                                                70.31925964355469,
+                                                                -0.5436675548553467
+                                                            ],
+                                                            "rotation": [
+                                                                0.5579449534416199,
+                                                                0.44136834144592285,
+                                                                -0.5557903051376343,
+                                                                0.43010297417640686
+                                                            ],
+                                                            "scale": [
+                                                                1.0000011920928955,
+                                                                1.0000011920928955,
+                                                                1.0000011920928955
+                                                            ],
+                                                            "type": 21
+                                                        }
+                                                    ],
+                                                    "is3D": true,
+                                                    "isPrefab": false,
+                                                    "name": "harkonnen_left_shoulder",
+                                                    "tag": 0
+                                                },
+                                                {
+                                                    "active": true,
+                                                    "children": [
+                                                        {
+                                                            "active": true,
+                                                            "children": [
+                                                                {
+                                                                    "active": true,
+                                                                    "children": [],
+                                                                    "components": [
+                                                                        {
+                                                                            "active": true,
+                                                                            "type": 23
+                                                                        },
+                                                                        {
+                                                                            "active": true,
+                                                                            "position": [
+                                                                                -6.198883056640625e-06,
+                                                                                110.66738891601563,
+                                                                                30.733539581298828
+                                                                            ],
+                                                                            "rotation": [
+                                                                                0.0,
+                                                                                0.0,
+                                                                                0.0,
+                                                                                1.0
+                                                                            ],
+                                                                            "scale": [
+                                                                                1.0,
+                                                                                1.0,
+                                                                                1.0
+                                                                            ],
+                                                                            "type": 21
+                                                                        }
+                                                                    ],
+                                                                    "is3D": true,
+                                                                    "isPrefab": false,
+                                                                    "name": "harkonnen_head_top_end",
+                                                                    "tag": 0
+                                                                }
+                                                            ],
+                                                            "components": [
+                                                                {
+                                                                    "active": true,
+                                                                    "type": 23
+                                                                },
+                                                                {
+                                                                    "active": true,
+                                                                    "position": [
+                                                                        -0.00012922286987304688,
+                                                                        18.962512969970703,
+                                                                        5.265894889831543
+                                                                    ],
+                                                                    "rotation": [
+                                                                        -0.15004786849021912,
+                                                                        -0.04944562911987305,
+                                                                        0.03920348733663559,
+                                                                        0.9866631031036377
+                                                                    ],
+                                                                    "scale": [
+                                                                        1.0,
+                                                                        0.9999997019767761,
+                                                                        0.9999998807907104
+                                                                    ],
+                                                                    "type": 21
+                                                                }
+                                                            ],
+                                                            "is3D": true,
+                                                            "isPrefab": false,
+                                                            "name": "harkonnen_head",
+                                                            "tag": 0
+                                                        }
+                                                    ],
+                                                    "components": [
+                                                        {
+                                                            "active": true,
+                                                            "type": 23
+                                                        },
+                                                        {
+                                                            "active": true,
+                                                            "position": [
+                                                                4.1484832763671875e-05,
+                                                                79.25658416748047,
+                                                                6.699562072753906e-05
+                                                            ],
+                                                            "rotation": [
+                                                                -0.08411119878292084,
+                                                                -0.008229445666074753,
+                                                                -0.007365798112004995,
+                                                                0.9963951706886292
+                                                            ],
+                                                            "scale": [
+                                                                1.0,
+                                                                1.0,
+                                                                1.0
+                                                            ],
+                                                            "type": 21
+                                                        }
+                                                    ],
+                                                    "is3D": true,
+                                                    "isPrefab": false,
+                                                    "name": "harkonnen_neck",
+                                                    "tag": 0
+                                                }
+                                            ],
+                                            "components": [
+                                                {
+                                                    "active": true,
+                                                    "type": 23
+                                                },
+                                                {
+                                                    "active": true,
+                                                    "position": [
+                                                        3.409385681152344e-05,
+                                                        70.94906616210938,
+                                                        0.00012150406837463379
+                                                    ],
+                                                    "rotation": [
+                                                        0.07360364496707916,
+                                                        0.04850948229432106,
+                                                        -0.037395305931568146,
+                                                        0.9954048991203308
+                                                    ],
+                                                    "scale": [
+                                                        0.9999960660934448,
+                                                        0.9999977946281433,
+                                                        0.9999980330467224
+                                                    ],
+                                                    "type": 21
+                                                }
+                                            ],
+                                            "is3D": true,
+                                            "isPrefab": false,
+                                            "name": "harkonnen_spine_2",
+                                            "tag": 0
+                                        }
+                                    ],
+                                    "components": [
+                                        {
+                                            "active": true,
+                                            "type": 23
+                                        },
+                                        {
+                                            "active": true,
+                                            "position": [
+                                                -4.76837158203125e-07,
+                                                62.081024169921875,
+                                                -5.125999450683594e-06
+                                            ],
+                                            "rotation": [
+                                                0.07342226058244705,
+                                                0.047554273158311844,
+                                                -0.03889928385615349,
+                                                0.9954067468643188
+                                            ],
+                                            "scale": [
+                                                0.9999984502792358,
+                                                0.9999977946281433,
+                                                1.0
+                                            ],
+                                            "type": 21
+                                        }
+                                    ],
+                                    "is3D": true,
+                                    "isPrefab": false,
+                                    "name": "harkonnen_spine_1",
+                                    "tag": 0
+                                }
+                            ],
+                            "components": [
+                                {
+                                    "active": true,
+                                    "type": 23
+                                },
+                                {
+                                    "active": true,
+                                    "position": [
+                                        7.927417755126953e-06,
+                                        52.778175354003906,
+                                        -2.5163190364837646
+                                    ],
+                                    "rotation": [
+                                        0.017293887212872505,
+                                        0.021305803209543228,
+                                        -0.027649639174342155,
+                                        0.9992409348487854
+                                    ],
+                                    "scale": [
+                                        0.9999893307685852,
+                                        0.999985933303833,
+                                        0.9999911189079285
+                                    ],
+                                    "type": 21
+                                }
+                            ],
+                            "is3D": true,
+                            "isPrefab": false,
+                            "name": "harkonnen_spine",
+                            "tag": 0
+                        },
+                        {
+                            "active": true,
+                            "children": [
+                                {
+                                    "active": true,
+                                    "children": [
+                                        {
+                                            "active": true,
+                                            "children": [
+                                                {
+                                                    "active": true,
+                                                    "children": [
+                                                        {
+                                                            "active": true,
+                                                            "children": [],
+                                                            "components": [
+                                                                {
+                                                                    "active": true,
+                                                                    "type": 23
+                                                                },
+                                                                {
+                                                                    "active": true,
+                                                                    "position": [
+                                                                        -1.3127923011779785e-05,
+                                                                        39.62654495239258,
+                                                                        3.337860107421875e-05
+                                                                    ],
+                                                                    "rotation": [
+                                                                        0.12347393482923508,
+                                                                        0.04740245267748833,
+                                                                        0.03664006292819977,
+                                                                        0.9905375838279724
+                                                                    ],
+                                                                    "scale": [
+                                                                        1.0,
+                                                                        0.9999998807907104,
+                                                                        0.9999997019767761
+                                                                    ],
+                                                                    "type": 21
+                                                                }
+                                                            ],
+                                                            "is3D": true,
+                                                            "isPrefab": false,
+                                                            "name": "harkonnen_left_toe_end",
+                                                            "tag": 0
+                                                        }
+                                                    ],
+                                                    "components": [
+                                                        {
+                                                            "active": true,
+                                                            "type": 23
+                                                        },
+                                                        {
+                                                            "active": true,
+                                                            "position": [
+                                                                1.7374753952026367e-05,
+                                                                100.06324768066406,
+                                                                -4.76837158203125e-06
+                                                            ],
+                                                            "rotation": [
+                                                                0.23244930803775787,
+                                                                -0.03089657984673977,
+                                                                0.020517371594905853,
+                                                                0.9719011187553406
+                                                            ],
+                                                            "scale": [
+                                                                0.9999999403953552,
+                                                                1.0,
+                                                                1.0
+                                                            ],
+                                                            "type": 21
+                                                        }
+                                                    ],
+                                                    "is3D": true,
+                                                    "isPrefab": false,
+                                                    "name": "harkonnen_left_toe_base",
+                                                    "tag": 0
+                                                }
+                                            ],
+                                            "components": [
+                                                {
+                                                    "active": true,
+                                                    "type": 23
+                                                },
+                                                {
+                                                    "active": true,
+                                                    "position": [
+                                                        0.6049461364746094,
+                                                        176.83766174316406,
+                                                        -0.9602298736572266
+                                                    ],
+                                                    "rotation": [
+                                                        0.602743923664093,
+                                                        -0.07479636371135712,
+                                                        0.05480571463704109,
+                                                        0.7925286293029785
+                                                    ],
+                                                    "scale": [
+                                                        1.0,
+                                                        1.0000001192092896,
+                                                        1.0000003576278687
+                                                    ],
+                                                    "type": 21
+                                                }
+                                            ],
+                                            "is3D": true,
+                                            "isPrefab": false,
+                                            "name": "harkonnen_left_foot",
+                                            "tag": 0
+                                        }
+                                    ],
+                                    "components": [
+                                        {
+                                            "active": true,
+                                            "type": 23
+                                        },
+                                        {
+                                            "active": true,
+                                            "position": [
+                                                3.02081036567688,
+                                                204.8345184326172,
+                                                37.44740295410156
+                                            ],
+                                            "rotation": [
+                                                -0.4585501551628113,
+                                                -0.060695700347423553,
+                                                -0.04608287289738655,
+                                                0.8853949308395386
+                                            ],
+                                            "scale": [
+                                                0.9999973773956299,
+                                                1.0,
+                                                1.0
+                                            ],
+                                            "type": 21
+                                        }
+                                    ],
+                                    "is3D": true,
+                                    "isPrefab": false,
+                                    "name": "harkonnen_left_leg",
+                                    "tag": 0
+                                }
+                            ],
+                            "components": [
+                                {
+                                    "active": true,
+                                    "type": 23
+                                },
+                                {
+                                    "active": true,
+                                    "position": [
+                                        58.862892150878906,
+                                        -29.26372718811035,
+                                        -4.967075347900391
+                                    ],
+                                    "rotation": [
+                                        0.08292002230882645,
+                                        0.36043187975883484,
+                                        0.9287818074226379,
+                                        -0.024030810222029686
+                                    ],
+                                    "scale": [
+                                        1.0000067949295044,
+                                        1.0000213384628296,
+                                        0.9999998807907104
+                                    ],
+                                    "type": 21
+                                }
+                            ],
+                            "is3D": true,
+                            "isPrefab": false,
+                            "name": "harkonnen_left_up_leg",
+                            "tag": 0
+                        },
+                        {
+                            "active": true,
+                            "children": [
+                                {
+                                    "active": true,
+                                    "children": [
+                                        {
+                                            "active": true,
+                                            "children": [
+                                                {
+                                                    "active": true,
+                                                    "children": [
+                                                        {
+                                                            "active": true,
+                                                            "children": [],
+                                                            "components": [
+                                                                {
+                                                                    "active": true,
+                                                                    "type": 23
+                                                                },
+                                                                {
+                                                                    "active": true,
+                                                                    "position": [
+                                                                        1.4277058653533459e-05,
+                                                                        38.881248474121094,
+                                                                        1.354515552520752e-05
+                                                                    ],
+                                                                    "rotation": [
+                                                                        0.0,
+                                                                        0.0,
+                                                                        0.0,
+                                                                        1.0
+                                                                    ],
+                                                                    "scale": [
+                                                                        1.0,
+                                                                        1.0,
+                                                                        1.0
+                                                                    ],
+                                                                    "type": 21
+                                                                }
+                                                            ],
+                                                            "is3D": true,
+                                                            "isPrefab": false,
+                                                            "name": "harkonnen_right_toe_end",
+                                                            "tag": 0
+                                                        }
+                                                    ],
+                                                    "components": [
+                                                        {
+                                                            "active": true,
+                                                            "type": 23
+                                                        },
+                                                        {
+                                                            "active": true,
+                                                            "position": [
+                                                                -4.673004150390625e-05,
+                                                                100.8878173828125,
+                                                                -4.0650367736816406e-05
+                                                            ],
+                                                            "rotation": [
+                                                                0.5412384271621704,
+                                                                0.18921224772930145,
+                                                                0.029296450316905975,
+                                                                0.8187804818153381
+                                                            ],
+                                                            "scale": [
+                                                                1.0,
+                                                                1.0,
+                                                                1.0
+                                                            ],
+                                                            "type": 21
+                                                        }
+                                                    ],
+                                                    "is3D": true,
+                                                    "isPrefab": false,
+                                                    "name": "harkonnen_right_toe_base",
+                                                    "tag": 0
+                                                }
+                                            ],
+                                            "components": [
+                                                {
+                                                    "active": true,
+                                                    "type": 23
+                                                },
+                                                {
+                                                    "active": true,
+                                                    "position": [
+                                                        1.33514404296875e-05,
+                                                        173.6293182373047,
+                                                        -1.71661376953125e-05
+                                                    ],
+                                                    "rotation": [
+                                                        0.5476602911949158,
+                                                        0.07208886742591858,
+                                                        0.013152450323104858,
+                                                        0.8334857225418091
+                                                    ],
+                                                    "scale": [
+                                                        0.9999993443489075,
+                                                        1.0,
+                                                        1.0
+                                                    ],
+                                                    "type": 21
+                                                }
+                                            ],
+                                            "is3D": true,
+                                            "isPrefab": false,
+                                            "name": "harkonnen_right_foot",
+                                            "tag": 0
+                                        }
+                                    ],
+                                    "components": [
+                                        {
+                                            "active": true,
+                                            "type": 23
+                                        },
+                                        {
+                                            "active": true,
+                                            "position": [
+                                                1.1920928955078125e-05,
+                                                196.97109985351563,
+                                                -1.9073486328125e-06
+                                            ],
+                                            "rotation": [
+                                                -0.5347213745117188,
+                                                0.025079386308789253,
+                                                -0.019530465826392174,
+                                                0.8444303870201111
+                                            ],
+                                            "scale": [
+                                                1.0,
+                                                0.9999999403953552,
+                                                1.0
+                                            ],
+                                            "type": 21
+                                        }
+                                    ],
+                                    "is3D": true,
+                                    "isPrefab": false,
+                                    "name": "harkonnen_right_leg",
+                                    "tag": 0
+                                }
+                            ],
+                            "components": [
+                                {
+                                    "active": true,
+                                    "type": 23
+                                },
+                                {
+                                    "active": true,
+                                    "position": [
+                                        -58.862876892089844,
+                                        -29.263944625854492,
+                                        -6.1865386962890625
+                                    ],
+                                    "rotation": [
+                                        -0.05605757609009743,
+                                        0.02833963744342327,
+                                        0.9870210289955139,
+                                        0.14779692888259888
+                                    ],
+                                    "scale": [
+                                        0.9999998807907104,
+                                        1.0000020265579224,
+                                        0.999997079372406
+                                    ],
+                                    "type": 21
+                                }
+                            ],
+                            "is3D": true,
+                            "isPrefab": false,
+                            "name": "harkonnen_right_up_leg",
+                            "tag": 0
+                        }
+                    ],
+                    "components": [
+                        {
+                            "active": true,
+                            "type": 23
+                        },
+                        {
+                            "active": true,
+                            "position": [
+                                4.510079383850098,
+                                398.2923278808594,
+                                7.36767053604126
+                            ],
+                            "rotation": [
+                                0.04879537224769592,
+                                -0.08585459738969803,
+                                0.04766107350587845,
+                                0.9939700365066528
+                            ],
+                            "scale": [
+                                0.9999999403953552,
+                                1.0,
+                                0.999999463558197
+                            ],
+                            "type": 21
+                        }
+                    ],
+                    "is3D": true,
+                    "isPrefab": false,
+                    "name": "harkonnen_hips",
+                    "tag": 0
+                }
+            ],
+            "components": [
+                {
+                    "active": true,
+                    "type": 23
+                },
+                {
+                    "active": true,
+                    "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "type": 21
+                }
+            ],
+            "is3D": true,
+            "isPrefab": false,
+            "name": "harkonnen_armature",
+            "tag": 0
+        },
+        {
+            "active": true,
+            "children": [],
+            "components": [
+                {
+                    "active": true,
+                    "type": 23
+                },
+                {
+                    "active": true,
+                    "position": [
+                        -1732.72998046875,
+                        0.0010128021240234375,
+                        -174.70941162109375
+                    ],
+                    "rotation": [
+                        6.491138293540644e-09,
+                        0.9880689978599548,
+                        4.164403577533449e-08,
+                        -0.15401190519332886
+                    ],
+                    "scale": [
+                        0.030000215396285057,
+                        0.029999999329447746,
+                        0.030000215396285057
+                    ],
+                    "type": 21
+                },
+                {
+                    "active": true,
+                    "mesh": {
+                        "asset_path": "",
+                        "draw_face_normals": false,
+                        "draw_vertex_normals": false,
+                        "is_animated": true,
+                        "shape_type": 0,
+                        "uid": 821724498
+                    },
+                    "type": 1
+                },
+                {
+                    "active": true,
+                    "color": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "shader": {
+                        "asset_path": "Assets/Shaders/default_shader.glsl",
+                        "uniforms": null
+                    },
+                    "texture": {
+                        "asset_path": "Assets/Textures/Characters/Enemies/Harkonnen/harkonnen_base_color.png"
+                    },
+                    "type": 2
+                },
+                {
+                    "active": true,
+                    "body_type": "Static",
+                    "freeze_position_x": false,
+                    "freeze_position_y": true,
+                    "freeze_position_z": false,
+                    "freeze_rotation_x": true,
+                    "freeze_rotation_y": true,
+                    "freeze_rotation_z": true,
+                    "mass": 1.0,
+                    "type": 6,
+                    "use_gravity": true
+                },
+                {
+                    "active": true,
+                    "center": [
+                        0.0,
+                        11.0,
+                        0.0
+                    ],
+                    "filter": "enemy",
+                    "is_trigger": false,
+                    "scale_factor": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "type": 7
+                },
+                {
+                    "active": true,
+                    "async": false,
+                    "file_name": "Assets/Scripts/Pathfinder.lua",
+                    "id": 1844698021,
+                    "inspector_variables": [
+                        {
+                            "name": "minRetargetingDistance",
+                            "type": "int",
+                            "value": 20
+                        },
+                        {
+                            "name": "standByTime",
+                            "type": "int",
+                            "value": 3
+                        }
+                    ],
+                    "type": 5
+                },
+                {
+                    "active": true,
+                    "async": true,
+                    "file_name": "Assets/Scripts/Enemies/EnemyController.lua",
+                    "id": 1608894853,
+                    "inspector_variables": [
+                        {
+                            "name": "static",
+                            "type": "bool",
+                            "value": true
+                        },
+                        {
+                            "name": "speed",
+                            "type": "int",
+                            "value": 20
+                        },
+                        {
+                            "name": "chaseSpeed",
+                            "type": "int",
+                            "value": 30
+                        },
+                        {
+                            "name": "attackRange",
+                            "type": "int",
+                            "value": 35
+                        },
+                        {
+                            "name": "visionConeAngle",
+                            "type": "int",
+                            "value": 70
+                        },
+                        {
+                            "name": "visionConeRadius",
+                            "type": "int",
+                            "value": 170
+                        },
+                        {
+                            "name": "hearingRange",
+                            "type": "int",
+                            "value": 140
+                        },
+                        {
+                            "name": "awarenessOffset",
+                            "type": "float3",
+                            "value": {
+                                "x": 0.0,
+                                "y": 30.0,
+                                "z": 0.0
+                            }
+                        },
+                        {
+                            "name": "awarenessSize",
+                            "type": "float3",
+                            "value": {
+                                "x": 0.10000000149011612,
+                                "y": 0.10000000149011612,
+                                "z": 0.10000000149011612
+                            }
+                        },
+                        {
+                            "name": "pingpong",
+                            "type": "bool",
+                            "value": false
+                        },
+                        {
+                            "name": "loop",
+                            "type": "bool",
+                            "value": false
+                        },
+                        {
+                            "name": "patrolWaypoints",
+                            "type": "float3_array",
+                            "value": []
+                        }
+                    ],
+                    "type": 5
+                },
+                {
+                    "active": true,
+                    "async": false,
+                    "file_name": "Assets/Scripts/Enemies/Harkonnen.lua",
+                    "id": 121533193,
+                    "type": 5
+                },
+                {
+                    "active": true,
+                    "ambientValue": 0.0,
+                    "castShadows": false,
+                    "constantAttenuationValue": 1.0,
+                    "cutOffAngle": 0.8660253882408142,
+                    "diffuseValue": 0.6000000238418579,
+                    "lightColor": [
+                        0.10000000149011612,
+                        0.6000000238418579,
+                        1.0
+                    ],
+                    "lightDirection": [
+                        0.0,
+                        0.0,
+                        -1.0
+                    ],
+                    "lightPosition": [
+                        -1732.72998046875,
+                        0.0010128021240234375,
+                        -174.70941162109375
+                    ],
+                    "linearAttenuationValue": 0.0,
+                    "quadraticAttenuationValue": 0.0,
+                    "sourceType": 2,
+                    "specularValue": 0.0,
+                    "type": 19
+                },
+                {
+                    "active": true,
+                    "fade_time": 2.0,
+                    "offset_sync": false,
+                    "total_tracks": 3,
+                    "tracks": [
+                        {
+                            "bypass": false,
+                            "custom_loop": false,
+                            "loop": false,
+                            "loop_offset": 0.0,
+                            "mute": false,
+                            "offset": 0.0,
+                            "pan": 0.0,
+                            "play_on_start": false,
+                            "track_path": "Assets/Audio/SFX/Harkonnen/harkonnen_attack_fx.wav",
+                            "transpose": 1.0,
+                            "volume": 100.0
+                        },
+                        {
+                            "bypass": false,
+                            "custom_loop": false,
+                            "loop": false,
+                            "loop_offset": 0.0,
+                            "mute": false,
+                            "offset": 0.0,
+                            "pan": 0.0,
+                            "play_on_start": false,
+                            "track_path": "Assets/Audio/SFX/Harkonnen/harkonnen_death_1_fx.wav",
+                            "transpose": 1.0,
+                            "volume": 100.0
+                        },
+                        {
+                            "bypass": false,
+                            "custom_loop": false,
+                            "loop": false,
+                            "loop_offset": 0.0,
+                            "mute": false,
+                            "offset": 0.0,
+                            "pan": 0.0,
+                            "play_on_start": false,
+                            "track_path": "Assets/Audio/SFX/Generic/generic_enemy_aware_fx.wav",
+                            "transpose": 1.0,
+                            "volume": 100.0
+                        }
+                    ],
+                    "type": 11
+                }
+            ],
+            "is3D": true,
+            "isPrefab": false,
+            "name": "harkonnen_mesh",
+            "tag": 2
+        },
+        {
+            "active": true,
+            "children": [
+                {
+                    "active": true,
+                    "children": [],
+                    "components": [
+                        {
+                            "active": true,
+                            "type": 23
+                        },
+                        {
+                            "active": true,
+                            "position": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rotation": [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            "scale": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            "type": 21
+                        },
+                        {
+                            "active": true,
+                            "resource": [
+                                {
+                                    "emitters": [
+                                        {
+                                            "loop": true,
+                                            "maxParticles": 500,
+                                            "modules": [
+                                                {
+                                                    "maxParticleLife": 3.0,
+                                                    "minParticleLife": 0.004999999888241291,
+                                                    "particlesPerSpawn": 1,
+                                                    "randomParticleLife": false,
+                                                    "spawnTime": 0.0,
+                                                    "type": 1
+                                                },
+                                                {
+                                                    "billboardingType": 2,
+                                                    "frontAxis": true,
+                                                    "maxDegrees": 360,
+                                                    "minDegrees": 0,
+                                                    "sideAxis": false,
+                                                    "topAxis": false,
+                                                    "type": 5
+                                                },
+                                                {
+                                                    "minInitialSize": [
+                                                        15.0,
+                                                        15.0,
+                                                        15.0
+                                                    ],
+                                                    "type": 4
+                                                },
+                                                {
+                                                    "colors": [
+                                                        {
+                                                            "color": [
+                                                                1.0,
+                                                                1.0,
+                                                                1.0,
+                                                                0.3921568691730499
+                                                            ],
+                                                            "position": 0.0
+                                                        }
+                                                    ],
+                                                    "type": 3
+                                                }
+                                            ],
+                                            "name": "Debuff",
+                                            "texture_path": "Assets/Textures/Particles/arrow.png"
+                                        }
+                                    ],
+                                    "name": "Debuff Indicator"
+                                }
+                            ],
+                            "type": 3
+                        }
+                    ],
+                    "is3D": true,
+                    "isPrefab": false,
+                    "name": "Enemy Debuff Particle",
+                    "tag": 0
+                },
+                {
+                    "active": true,
+                    "children": [],
+                    "components": [
+                        {
+                            "active": true,
+                            "type": 23
+                        },
+                        {
+                            "active": true,
+                            "position": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rotation": [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            "scale": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            "type": 21
+                        },
+                        {
+                            "active": true,
+                            "resource": [
+                                {
+                                    "emitters": [
+                                        {
+                                            "loop": true,
+                                            "maxParticles": 500,
+                                            "modules": [
+                                                {
+                                                    "maxParticleLife": 3.0,
+                                                    "minParticleLife": 0.004999999888241291,
+                                                    "particlesPerSpawn": 1,
+                                                    "randomParticleLife": false,
+                                                    "spawnTime": 0.0,
+                                                    "type": 1
+                                                },
+                                                {
+                                                    "billboardingType": 2,
+                                                    "frontAxis": true,
+                                                    "maxDegrees": 360,
+                                                    "minDegrees": 320,
+                                                    "sideAxis": false,
+                                                    "topAxis": false,
+                                                    "type": 5
+                                                },
+                                                {
+                                                    "colors": [
+                                                        {
+                                                            "color": [
+                                                                1.0,
+                                                                0.0,
+                                                                0.0,
+                                                                0.5882353186607361
+                                                            ],
+                                                            "position": 0.0
+                                                        }
+                                                    ],
+                                                    "type": 3
+                                                },
+                                                {
+                                                    "followForward": true,
+                                                    "maxAcceleration": [
+                                                        0.25,
+                                                        0.25,
+                                                        0.25
+                                                    ],
+                                                    "maxDirection": [
+                                                        -1.0,
+                                                        -1.0,
+                                                        -1.0
+                                                    ],
+                                                    "maxPosition": [
+                                                        1.0,
+                                                        1.0,
+                                                        1.0
+                                                    ],
+                                                    "maxVelocity": 5.0,
+                                                    "minAcceleration": [
+                                                        0.0,
+                                                        0.0,
+                                                        0.0
+                                                    ],
+                                                    "minDirection": [
+                                                        1.0,
+                                                        1.0,
+                                                        1.0
+                                                    ],
+                                                    "minPosition": [
+                                                        -1.0,
+                                                        -1.0,
+                                                        -5.0
+                                                    ],
+                                                    "minVelocity": 0.0,
+                                                    "randAcceleration": false,
+                                                    "randDirection": false,
+                                                    "randPosition": false,
+                                                    "randVelocity": false,
+                                                    "type": 2
+                                                },
+                                                {
+                                                    "minInitialSize": [
+                                                        20.0,
+                                                        20.0,
+                                                        20.0
+                                                    ],
+                                                    "type": 4
+                                                }
+                                            ],
+                                            "name": "Blood Splatters",
+                                            "texture_path": "Assets/Textures/Particles/blood.png"
+                                        },
+                                        {
+                                            "loop": true,
+                                            "maxParticles": 500,
+                                            "modules": [
+                                                {
+                                                    "maxParticleLife": 3.0,
+                                                    "minParticleLife": 0.004999999888241291,
+                                                    "particlesPerSpawn": 1,
+                                                    "randomParticleLife": false,
+                                                    "spawnTime": 0.0,
+                                                    "type": 1
+                                                },
+                                                {
+                                                    "billboardingType": 2,
+                                                    "frontAxis": true,
+                                                    "maxDegrees": 360,
+                                                    "minDegrees": 0,
+                                                    "sideAxis": false,
+                                                    "topAxis": false,
+                                                    "type": 5
+                                                },
+                                                {
+                                                    "colors": [
+                                                        {
+                                                            "color": [
+                                                                1.0,
+                                                                0.0,
+                                                                0.0,
+                                                                0.5882353186607361
+                                                            ],
+                                                            "position": 0.0
+                                                        }
+                                                    ],
+                                                    "type": 3
+                                                },
+                                                {
+                                                    "followForward": true,
+                                                    "maxAcceleration": [
+                                                        0.25,
+                                                        0.25,
+                                                        0.25
+                                                    ],
+                                                    "maxDirection": [
+                                                        -1.0,
+                                                        -1.0,
+                                                        -1.0
+                                                    ],
+                                                    "maxPosition": [
+                                                        0.5,
+                                                        0.5,
+                                                        0.5
+                                                    ],
+                                                    "maxVelocity": 5.0,
+                                                    "minAcceleration": [
+                                                        0.0,
+                                                        0.0,
+                                                        0.0
+                                                    ],
+                                                    "minDirection": [
+                                                        1.0,
+                                                        1.0,
+                                                        1.0
+                                                    ],
+                                                    "minPosition": [
+                                                        -0.5,
+                                                        -0.5,
+                                                        -5.0
+                                                    ],
+                                                    "minVelocity": 0.0,
+                                                    "randAcceleration": false,
+                                                    "randDirection": false,
+                                                    "randPosition": false,
+                                                    "randVelocity": false,
+                                                    "type": 2
+                                                },
+                                                {
+                                                    "minInitialSize": [
+                                                        20.0,
+                                                        20.0,
+                                                        20.0
+                                                    ],
+                                                    "type": 4
+                                                }
+                                            ],
+                                            "name": "Blood Pools",
+                                            "texture_path": "Assets/Textures/Particles/blood_huge.png"
+                                        }
+                                    ],
+                                    "name": "Blood"
+                                }
+                            ],
+                            "type": 3
+                        }
+                    ],
+                    "is3D": true,
+                    "isPrefab": false,
+                    "name": "Enemy Blood Particle",
+                    "tag": 0
+                },
+                {
+                    "active": true,
+                    "children": [],
+                    "components": [
+                        {
+                            "active": true,
+                            "type": 23
+                        },
+                        {
+                            "active": true,
+                            "position": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rotation": [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            "scale": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            "type": 21
+                        },
+                        {
+                            "active": true,
+                            "resource": [
+                                {
+                                    "emitters": [
+                                        {
+                                            "loop": true,
+                                            "maxParticles": 500,
+                                            "modules": [
+                                                {
+                                                    "maxParticleLife": 3.0,
+                                                    "minParticleLife": 0.004999999888241291,
+                                                    "particlesPerSpawn": 1,
+                                                    "randomParticleLife": false,
+                                                    "spawnTime": 0.0,
+                                                    "type": 1
+                                                },
+                                                {
+                                                    "billboardingType": 2,
+                                                    "frontAxis": true,
+                                                    "maxDegrees": 360,
+                                                    "minDegrees": 0,
+                                                    "sideAxis": false,
+                                                    "topAxis": false,
+                                                    "type": 5
+                                                },
+                                                {
+                                                    "colors": [
+                                                        {
+                                                            "color": [
+                                                                1.0,
+                                                                0.0,
+                                                                0.0,
+                                                                1.0
+                                                            ],
+                                                            "position": 0.0
+                                                        }
+                                                    ],
+                                                    "type": 3
+                                                },
+                                                {
+                                                    "minInitialSize": [
+                                                        20.0,
+                                                        20.0,
+                                                        20.0
+                                                    ],
+                                                    "type": 4
+                                                }
+                                            ],
+                                            "name": "Emitter",
+                                            "texture_path": "Assets/Textures/Particles/slash.png"
+                                        }
+                                    ],
+                                    "name": "Slash"
+                                }
+                            ],
+                            "type": 3
+                        }
+                    ],
+                    "is3D": true,
+                    "isPrefab": false,
+                    "name": "Enemy Slash Particle",
+                    "tag": 0
+                }
+            ],
+            "components": [
+                {
+                    "active": true,
+                    "type": 23
+                },
+                {
+                    "active": true,
+                    "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "type": 21
+                }
+            ],
+            "is3D": true,
+            "isPrefab": true,
+            "name": "Enemy Particles",
+            "tag": 0
+        }
+    ],
+    "components": [
+        {
+            "active": true,
+            "type": 23
+        },
+        {
+            "active": true,
+            "position": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "type": 21
+        },
+        {
+            "active": true,
+            "animation": {
+                "asset_path": "Assets/Models/Enemies/harkonnen_armature|harkonnen_armature|harkonnen_armature|harkonnen_reel.cake",
+                "uid": 316919178
+            },
+            "clips": [
+                {
+                    "clipDuration": 16.0,
+                    "clipDurationInSeconds": 0.6666666865348816,
+                    "clipEndFrame": 174.0,
+                    "clipFinished": true,
+                    "clipLoop": false,
+                    "clipName": "Attack",
+                    "clipStartFrame": 158.0,
+                    "mapString": "Attack"
+                },
+                {
+                    "clipDuration": 16.0,
+                    "clipDurationInSeconds": 0.6666666865348816,
+                    "clipEndFrame": 191.0,
+                    "clipFinished": true,
+                    "clipLoop": false,
+                    "clipName": "AttackToIdle",
+                    "clipStartFrame": 175.0,
+                    "mapString": "AttackToIdle"
+                },
+                {
+                    "clipDuration": 1.0,
+                    "clipDurationInSeconds": 0.0416666679084301,
+                    "clipEndFrame": 280.0,
+                    "clipFinished": false,
+                    "clipLoop": true,
+                    "clipName": "Corpse",
+                    "clipStartFrame": 279.0,
+                    "mapString": "Corpse"
+                },
+                {
+                    "clipDuration": 90.0,
+                    "clipDurationInSeconds": 3.75,
+                    "clipEndFrame": 281.0,
+                    "clipFinished": true,
+                    "clipLoop": false,
+                    "clipName": "Death",
+                    "clipStartFrame": 191.0,
+                    "mapString": "Death"
+                },
+                {
+                    "clipDuration": 312.0,
+                    "clipDurationInSeconds": 13.0,
+                    "clipEndFrame": 312.0,
+                    "clipFinished": false,
+                    "clipLoop": false,
+                    "clipName": "Default clip",
+                    "clipStartFrame": 0.0,
+                    "mapString": "Default clip"
+                },
+                {
+                    "clipDuration": 97.0,
+                    "clipDurationInSeconds": 4.041666507720947,
+                    "clipEndFrame": 97.0,
+                    "clipFinished": true,
+                    "clipLoop": true,
+                    "clipName": "Idle",
+                    "clipStartFrame": 0.0,
+                    "mapString": "Idle"
+                },
+                {
+                    "clipDuration": 22.0,
+                    "clipDurationInSeconds": 0.9166666865348816,
+                    "clipEndFrame": 312.0,
+                    "clipFinished": false,
+                    "clipLoop": true,
+                    "clipName": "Run",
+                    "clipStartFrame": 290.0,
+                    "mapString": "Run"
+                },
+                {
+                    "clipDuration": 32.0,
+                    "clipDurationInSeconds": 1.3333333730697632,
+                    "clipEndFrame": 135.0,
+                    "clipFinished": false,
+                    "clipLoop": true,
+                    "clipName": "Walk",
+                    "clipStartFrame": 103.0,
+                    "mapString": "Walk"
+                }
+            ],
+            "meshes": [
+                {
+                    "asset_path": "",
+                    "uid": 821724498
+                }
+            ],
+            "selectedClip": "Idle",
+            "type": 12
+        }
+    ],
+    "is3D": true,
+    "isPrefab": true,
+    "name": "Harkonnen",
+    "tag": 0
+}
